@@ -3,6 +3,11 @@ using namespace std;
 
 int main(){
 
+    cout << "What is your name?" << endl;
+    string s;
+    cin >> s;
+    cout << "Hello, " << s << "!" << endl;
+
     cout << "Rolling the dice..." << endl;
     random_device rnd;
     int a = rnd()%6 + 1;
@@ -10,4 +15,7 @@ int main(){
     cout << "Die 1: " << a << endl;
     cout << "Die 2: " << b << endl;
     cout << "Total value: " << a + b << endl;
+
+    if((a+b)>7)cout << "You won" << endl;
+    else cout << "You lost" << endl;
 }
